@@ -20,7 +20,7 @@ let eventos = {
         move: "touchmove",
         up: "touchend"
     }
-};
+}
 
 let deviceType = "";
 
@@ -36,7 +36,7 @@ const isTouchDevice = () => {
         deviceType = 'mouse';
         return false;
     }
-};
+}
 
 isTouchDevice();
 
@@ -79,7 +79,7 @@ gridButton.addEventListener('click', () => {
 
         container.appendChild(div);
     }
-});
+})
 
 function checker(elementId) {
     let element = document.getElementById(elementId);
@@ -94,11 +94,11 @@ function checker(elementId) {
 
 clearGridButton.addEventListener('click', () => {
     container.innerHTML = '';
-});
+})
 
 eraseBtn.addEventListener('click', () => {
     apagar = true;
-});
+})
 
 paintBtn.addEventListener('click', () => {
     apagar = false;
@@ -106,15 +106,15 @@ paintBtn.addEventListener('click', () => {
 
 gridWidth.addEventListener('input', () => {
     widthValue.innerHTML = gridWidth.value < 10 ? `0${gridWidth.value}` : gridWidth.value;
-});
+})
 
 gridHeight.addEventListener('input', () => {
     heightValue.innerHTML = gridHeight.value < 10 ? `0${gridHeight.value}` : gridHeight.value;
-});
+})
 
 window.onload = () => {
     gridHeight.value = 0;
     gridWidth.value = 0;
     widthValue.innerHTML = "00";
     heightValue.innerHTML = "00";
-};
+}
